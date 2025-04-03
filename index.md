@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>油漆／噴漆</title>
+    <title>油漆／噴漆／防水</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
         .container { max-width: 600px; margin: auto; }
