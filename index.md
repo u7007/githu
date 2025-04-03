@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/u7007/githu/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/u7007/githu/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技術選擇介紹</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        img { width: 100%; max-width: 400px; margin-top: 20px; }
+        .info { margin-top: 20px; }
+        .contact { margin-top: 30px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>選擇您想了解的技術</h2>
+        <select id="techSelect">
+            <option value="">-- 選擇技術 --</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select>
+        <div class="info" id="info"></div>
+        <div class="contact">聯絡方式：高雄油漆 洪重發油漆工程 0915189498</div>
+    </div>
+    <script>
+        document.getElementById('techSelect').addEventListener('change', function() {
+            var infoDiv = document.getElementById('info');
+            var value = this.value;
+            var content = "";
+            
+            if (value === "html") {
+                content = "<img src='https://via.placeholder.com/400x200?text=HTML' alt='HTML'>" +
+                          "<p>HTML（超文本標記語言）是建立網頁的基礎，用於結構化內容。</p>";
+            } else if (value === "css") {
+                content = "<img src='https://via.placeholder.com/400x200?text=CSS' alt='CSS'>" +
+                          "<p>CSS（層疊樣式表）負責美化網頁，使其更具吸引力。</p>";
+            } else if (value === "js") {
+                content = "<img src='https://via.placeholder.com/400x200?text=JavaScript' alt='JavaScript'>" +
+                          "<p>JavaScript 是用於讓網頁具有互動功能的程式語言。</p>";
+            }
+            infoDiv.innerHTML = content;
+        });
+    </script>
+</body>
+</html>
